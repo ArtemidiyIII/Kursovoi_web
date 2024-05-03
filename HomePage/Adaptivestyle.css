@@ -2,10 +2,142 @@
 
 }
 @media screen and (max-width: 1080px){
-    
+    .grid {
+        justify-items: center;
+        grid-column-gap: 32px;
+        grid-row-gap: 64px;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto
+    }
+    .Content-text{
+        grid-column-end: 2;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: 3;
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        padding-left: 0px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .Content-text::before {
+        left: -40px;
+    }
+    .Content-img{
+        grid-column-start: 1;
+        -ms-grid-column-span: 1;
+        grid-column-end: 2;
+        -ms-grid-row: 1;
+        grid-row-start: 1;
+        -ms-grid-row-span: 1;
+        grid-row-end: 2;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        max-width: 800px;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        vertical-align: middle;
+        display: inline-block;
+
+    }
+    .image_01 {
+        object-position: 50% 100%;
+    }
 }
 @media screen and (max-width: 768px){
+    .nav_menu{
+        display: none;
+    }
+    .nav_third-block{
+        display: none;
+    }
+    .header-right{
+        display: none;
+    }
+
+    /* burger-menu */
+
+    #menu_toogle:checked ~ .burger-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        opacity: 1;
+    }
     
+    .btn > span{
+        transition: all 0.2s;
+    }
+    
+    .btn{
+        display: flex; 
+        align-items: center; 
+        position: relative;
+        right: 0px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+      .btn > span,
+      .btn > span::before,
+      .btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #FFFFFF;
+     
+    }
+    .btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    #menu_toogle:checked ~ .btn > span {
+        transform: rotate(45deg);
+    }
+    #menu_toogle:checked ~ .btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu_toogle:checked ~ .btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* /burger-menu */
+
+    .footer-content {
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer_block-menu{
+        display: flex;
+        justify-content: center;
+        margin: 0 -15px;
+        flex-basis: auto;
+        min-width: auto;
+    }
+    .footer_block{
+        text-align: center;
+    }
+    .footer_block-menu-item{
+        margin: 0 15px 50px;
+    }
 }
 @media screen and (max-width: 500px){
     

@@ -1,12 +1,25 @@
 {
   "en": {
-        "": "",
-        "": "",
-        "": ""
+    "title": "MNTN",
+    "equipment": "Equipment",
+    "about_us": "About us",
+    "blog": "Blog",
+    "checkusers": "Check all users",
+    "account": "Account",
+    "get_started": "Get Started",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
   },
 
   "ru": {
-        
+    "title": "MNTN"
 
   }
 }

@@ -6,6 +6,10 @@
 a {
     text-decoration: none;
 }
+button {
+    text-decoration: none;
+    border: none;
+}
 img {
     vertical-align: top;
     border-style: none;
@@ -36,7 +40,6 @@ body {
 header{
     display: flex;
     width: 100%;
-    height: 100%;
     position: absolute;
     top: 0%;
 }
@@ -55,12 +58,12 @@ header{
     width: 100%;
     align-items: center;
     position: absolute;
-    justify-content: space-between;
     flex-direction: row;
-    height: 24px;
+    height: 152px;
     padding: 64px 4.2%;
     /* background-color: #d30909; */
     margin: 0;
+    z-index: 1;
 }
 .BG_Hero {
     position: relative;
@@ -118,11 +121,22 @@ header{
     cursor:pointer;
 }
 
+.nav_second-block{
+    position: relative;
+    display: flex;
+    max-width: 626px;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
     /* toogle-switch */
 
 .toogle-switch{
-    position: absolute;
-    left: 15%;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .switch {
     position: relative;
@@ -176,12 +190,17 @@ input:checked + .slider:before {
     /* /toogle-switch */
 
 .nav_menu {
-    position: absolute;
     display: flex;
+    position: relative;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 91.6%;
+    justify-self: center;
+    justify-content: space-between;
+    flex-basis: 293px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: 233px;
+    width: 100%;
 }
 .nav_menu-text {
     font-family: 'Gilroy_bold';
@@ -192,27 +211,61 @@ input:checked + .slider:before {
     margin-top: 2px;
     padding-left: 5px;
     padding-right: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
+}
+.nav_third-block{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-around;
+    max-width: 626px;
+    min-width: 136px;
+    width: 100%;
+}
+.for_admin{
+    align-items: center;
 }
 .header-right{
     display: flex;
     flex-direction: row;
+
 }
-.Account {
-    position: absolute;
-    height: 24px;
+#Account {
+    position: relative;
     width: 98px;
-    left: 1662px;
+    justify-self: end;
     top: 1px;
     bottom: 1px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.account{
+    font-family: 'Gilroy_bold';
+    font-size: 17px;
+    line-height: 1.209;
     color: #FFFFFF;
 }
 .btn{
     display: none;
 }
 .burger-menu{
+    z-index: 4;
     display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 100px;
+    left: 0;
+    justify-content: space-between;
+    transition: 0.2s all;
+    flex-direction: column;
+    gap: 10px;
+    background-color:rgba(3, 18, 26, 0.8);
+    font-size: 20px;
+    color:white;
 }
 #menu_toogle {
     display: none;
@@ -241,7 +294,7 @@ input:checked + .slider:before {
     margin-right: auto;
     margin-left: auto;
     top: 287px;
-    z-index: 50;
+    z-index: 1;
 }
 
     /* Social */
@@ -342,17 +395,26 @@ input:checked + .slider:before {
     /* /Content-hero */
 
     /* Nav-slider */
-.Nav-slider {
+
+.Nav-slider-container{
     height: 240px;
     width: 77px;
-    left: 1683px;
-    top: 39px;
+}    
+
+.Nav-slider {
+    position: fixed;
+    height: 240px;
+    width: 77px;
     background-color: aqua;
 }
+
 .nav-slider-links {
 }
 .nav-slider-lines {
 }
+
+    /* /Nav-slider */
+
 main {
     width: 100%;
     top: 0%;
@@ -387,12 +449,14 @@ main {
     align-items: center;
     padding-bottom: 200px;
 }
-.Content-block:nth-child(2n) .grid .Content-img{
-    grid-row-start: 1;
-    justify-self: start;
-}
-.Content-block:nth-child(2n) .grid{
-    grid-template-columns: 0.724fr 1fr;
+@media screen and (min-width: 1080px){
+    .Content-block:nth-child(2n) .grid .Content-img{
+        grid-row-start: 1;
+        justify-self: start;
+    }
+    .Content-block:nth-child(2n) .grid{
+        grid-template-columns: 0.724fr 1fr;
+    }
 }
 
 .grid {
@@ -410,7 +474,6 @@ main {
     padding-top: 141px;
     padding-left: 150px;
     max-width: 782px;
-    min-width: 543px;
 }
 .Content-text::before {
     position: absolute;
@@ -495,7 +558,6 @@ main {
 }
 .Content-img {
     max-width: 566px;
-    min-width: 400px;
     height: 720px;
     width: 100%;
     vertical-align: middle;
@@ -589,6 +651,7 @@ footer {
     line-height: 1.78;
     color: #FFFFFF;
     margin: 16px 0 0;
+    z-index: auto;
 }
 
 
