@@ -1,0 +1,217 @@
+.Container {
+    position: absolute;
+    background-color: #0B1D26;
+    height: 4600px;
+    width: 1920px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.BG_Hero {
+    position: absolute;
+    height: 1200px;
+    width: 1920px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+}
+.BG_Content {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);
+    height: 700px;
+    width: 1920px;
+    left: 0px;
+    top: 1200px;
+    bottom: 0px;
+}
+.img_HG {
+    position: absolute;
+    height: 1513px;
+    width: 1920px;
+    left: 0px;
+    top: -400px;
+    bottom: 0px;
+}
+.img_MG {
+    position: absolute;
+    height: 1422px;
+    width: 1920px;
+    left: 0px;
+    top: 464px;
+}
+.img_VG {
+    position: absolute;
+    background: url(img/vg.png);
+    height: 926px;
+    width: 1920px;
+    left: 0px;
+    top: 768px;
+}
+.header {
+    position: absolute;
+    height: 22px;
+    width: 1760px;
+    left: 80px;
+    top: 64px;
+    color: #FFFFFF;
+    background-color: #d30909;
+    margin: 0;
+}
+.Logo {
+    position: absolute;
+    height: 24px;
+    width: 108px;
+    left: 0px;
+    top: 0px;
+    color: #FFFFFF;
+}
+.m {
+    color: FFFFFF;
+}
+
+.n {
+
+}
+.t {
+
+}
+.n-1 {
+
+}
+.Equipment {
+    position: absolute;
+    height: 22px;
+    width: 90px;
+    left: 739px;
+    top: 2px;
+    bottom: 1px;
+    color: #FFFFFF;
+}
+.About_us {
+    position: absolute;
+    height: 22px;
+    width: 75px;
+    left: 869px;
+    top: 2px;
+    bottom: 1px;
+    color: #FFFFFF;
+}
+.Blog {
+    position: absolute;
+    height: 22px;
+    width: 38px;
+    left: 984px;
+    top: 2px;
+    bottom: 1px;
+    color: #FFFFFF;
+}
+.Account {
+    position: absolute;
+    height: 24px;
+    width: 98px;
+    left: 1662px;
+    top: 1px;
+    bottom: 1px;
+    color: #FFFFFF;
+}
+.icons-general-cart {
+}
+.iconactionaccount-circle-24-px {
+}
+.account-1 {
+}
+.main {
+    position: absolute;
+    height: 4600px;
+    width: 1920px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.Container1_main {
+    position: absolute;
+    height: 310px;
+    width: 1760px;
+    left: 80px;
+    top: 287px;
+}
+.Social {
+    position: absolute;
+    height: 173px;
+    width: 24px;
+    left: 0px;
+    top: 72px;
+    background-color: aqua;
+}
+.Follow_us {
+}
+.instagram {
+}
+.twitter {
+}
+
+.Content1 {
+    position: absolute;
+    height: 310px;
+    width: 950px;
+    left: 420px;
+    top: 0px;
+}
+.Group17 {
+}
+.Rectangle2_1 {
+    position: absolute;
+    height: 2px;
+    width: 72px;
+    left: 0px;
+    top: 10px;
+    background-color: #FBD784;
+}
+.A_Hiking_guide {
+    position: absolute;
+    height: 22px;
+    width: 212px;
+    left: 104px;
+    top: 0px;
+    color: #FBD784;
+    font-size: 18px;
+    letter-spacing: 6px;
+    line-height: auto;
+    font-family: 'Gilroy';
+}
+.Be_prepared {
+}
+.Group7 {
+}
+
+.Slider {
+    position: absolute;
+    height: 240px;
+    width: 77px;
+    left: 1683px;
+    top: 39px;
+    background-color: aqua;
+}
+.Slider1_1 {
+}
+.Slider1_2 {
+}
+
+.Container2_main {
+    position: absolute;
+    height: 3040px;
+    width: 1462px;
+    left: 229px;
+    top: 1440px;
+    background-color: aqua;
+}
+.Content01 {
+}
+.Content02 {
+}
+.Content03 {
+}
+
+.footer {
+}
