@@ -41,14 +41,13 @@ header{
 .header-content {
     position: absolute;
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: space-around;
-    height: 22px;
-    width: 1760px;
-    left: 80px;
-    top: 64px;
+    justify-content: space-between;
     flex-direction: row;
-    background-color: #d30909;
+    height: 24px;
+    padding: 64px 4.2%;
+    /* background-color: #d30909; */
     margin: 0;
 }
 .BG_Hero {
@@ -100,13 +99,7 @@ header{
     background: url("../img/vg.png");
     background-repeat: no-repeat;
     background-size: contain;
-    left: 0px;
-    
-}
-main {
-    width: 100%;
-    top: 0%;
-    position: absolute;
+    left: 0px;   
 }
 .Logo {
     position: absolute;
@@ -116,18 +109,11 @@ main {
     top: 0px;
     color: #FFFFFF;
 }
-.m {
-    color: FFFFFF;
-}
-
-.n {
-
-}
-.t {
-
-}
-.n-1 {
-
+.nav_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .Equipment {
     position: absolute;
@@ -246,7 +232,11 @@ main {
 }
 .nav-slider-lines {
 }
-
+main {
+    width: 100%;
+    top: 0%;
+    position: absolute;
+}
 .Container2_main {
     position: absolute;
     height: 3040px;
