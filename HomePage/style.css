@@ -110,10 +110,12 @@ header{
     color: #FFFFFF;
 }
 .nav_menu {
+    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 91.6%;
 }
 .Equipment {
     position: absolute;
@@ -142,6 +144,10 @@ header{
     bottom: 1px;
     color: #FFFFFF;
 }
+.header-right{
+    display: flex;
+    flex-direction: row;
+}
 .Account {
     position: absolute;
     height: 24px;
@@ -150,6 +156,15 @@ header{
     top: 1px;
     bottom: 1px;
     color: #FFFFFF;
+}
+.btn{
+    display: none;
+}
+.burger-menu{
+    display: none;
+}
+#menu_toogle {
+    display: none;
 }
 .icons-general-cart {
 }
@@ -245,7 +260,94 @@ main {
     top: 1440px;
     background-color: aqua;
 }
-.Content01 {
+
+
+/* Content section */
+
+
+.Content-section{
+    max-width: 1492px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.Content-block {
+    display: flex;
+    justify-content: space-between;
+}
+.Content-text{
+    padding-top: 141px;
+    padding-left: 150px;
+    max-width: 782px;
+}
+.Content-subtitle{
+    font-family: 'Gilroy_extrabold';
+    margin-bottom: 32px;
+    position: relative;
+    padding-left: 96px;
+    /*font-weight: 800; */
+    font-size: 18px;
+    line-height: 1.222;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FBD784;
+}
+.Content-subtitle::before{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    content:'';
+    width: 72px;
+    height: 2px;
+    background-color: #FBD784;
+
+}
+.Content-title{
+    font-family: 'Chronicle_semibold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    max-width: 555px;
+    margin-bottom: 27px;
+}
+.Content-text p {
+    font-family: 'Gilroy_bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.78;
+    text-align: left;
+    color: #FFFFFF;
+
+}
+.content-read-more{
+    display: inline-block;
+    position: relative;
+    padding-right: 32px;
+    font-family: 'Gilroy_bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.222;
+    color: #FBD784;
+}
+.content-read-more::after{
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 16px;
+    background-image: url(../vectors/arrow_downward_24px.svg);
+    width: 16px;
+
 }
 .Content02 {
 }
