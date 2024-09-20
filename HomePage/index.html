@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="set-cookie">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Adaptivestyle.css">
     <title class="i18n" i18n="title">MNTN</title>
 </head>
@@ -23,29 +24,29 @@
                         <img src="../vectors/Logo.svg" alt="">
                     </div>
                 </a>
-                    <nav class="nav_menu">                    
-                        <a i18n="equipment" href="#" class="i18n nav_menu-text">Equipment
-                        </a>
-                        <a href="#" i18n="about_us" class="i18n nav_menu-text">About us
-                        </a>
-                        <a href="#" i18n="blog" class="i18n nav_menu-text" >Blog
-                        </a>           
-                    </nav>
+                <div class="toogle-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="check">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <select name="" id="languageSelect">
+                    <option value="en" id="translateEN" select>en</option>
+                    <option value="ru" id="translateRU">ru</option>
+                </select>
+                <nav class="nav_menu">                    
+                    <a i18n="equipment" href="#" class="i18n nav_menu-text">Equipment
+                    </a>
+                    <a href="#" i18n="about_us" class="i18n nav_menu-text">About us
+                    </a>
+                    <a href="#" i18n="blog" class="i18n nav_menu-text" >Blog
+                    </a>           
+                </nav>
                 <div class="header-right">
                     <div class="for_admin">
-                        <a id="checkusers" href="../Check All Users/checkallusers.html">
-                            <p i18n="checkusers" class="i18n">Check all users</p>
+                        <a i18n="checkusers" href="../Check All Users/checkallusers.html" class="i18n nav_menu-text">
+                            Check all users</p>
                         </a>
-                    </div>
-                    <select name="" id="languageSelect">
-                        <option value="en" id="translateEN" select>en</option>
-                        <option value="ru" id="translateRU">ru</option>
-                    </select>
-                    <div class="toogle-switch">
-                        <label class="switch">
-                            <input type="checkbox" id="check">
-                            <span class="slider round"></span>
-                        </label>
                     </div> 
                     <div class="Account-menu">
                         <button id="Account">
