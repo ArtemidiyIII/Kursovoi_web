@@ -129,32 +129,17 @@ header{
     justify-content: center;
     width: 91.6%;
 }
-.Equipment {
-    position: absolute;
-    height: 22px;
-    width: 90px;
-    left: 739px;
-    top: 2px;
-    bottom: 1px;
+.nav_menu-text {
+    font-family: 'Gilroy_bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.209;
     color: #FFFFFF;
-}
-.About_us {
-    position: absolute;
-    height: 22px;
-    width: 75px;
-    left: 869px;
-    top: 2px;
-    bottom: 1px;
-    color: #FFFFFF;
-}
-.Blog {
-    position: absolute;
-    height: 22px;
-    width: 38px;
-    left: 984px;
-    top: 2px;
-    bottom: 1px;
-    color: #FFFFFF;
+    margin-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .header-right{
     display: flex;
@@ -187,7 +172,7 @@ header{
 .Site-cover{
     position: relative;
     height: 1200px;
-    width: 1920px;
+    width: 100%;
 }
 .Second-nav {
     position: relative;
@@ -236,14 +221,14 @@ header{
 
     /* Content-hero */
 
-.Content-hero {
+.Hero-content {
     position: relative;
     height: 310px;
     max-width: 950px;
     width: 100%;
     top: 0px;
 }
-.Content-subtitle{
+.Hero-subtitle{
     font-family: 'Gilroy_extrabold';
     margin-bottom: 32px;
     position: relative;
@@ -254,7 +239,7 @@ header{
     letter-spacing: 6px;
     text-transform: uppercase;
 }
-.Content-subtitle::before{
+.Hero-subtitle::before{
     position: absolute;
     left: 0;
     top: 50%;
@@ -266,7 +251,7 @@ header{
     background-color: #FBD784;
 
 }
-.Content-title{
+.Hero-title{
     font-family: 'Chronicle_semibold';
     font-style: normal;
     font-weight: 600;
@@ -276,7 +261,7 @@ header{
     max-width: 950px;
     margin-bottom: 32px;
 }
-.content-scroll-down{
+.Hero-scroll-down{
     display: inline-block;
     position: relative;
     padding-right: 32px;
@@ -284,9 +269,9 @@ header{
     font-weight: 700;
     font-size: 18px;
     line-height: 1.222;
-    color: #FBD784;
+    color: #FFFFFF;
 }
-.content-scroll-down::after{
+.Hero-scroll-down::after{
     display: block;
     content: '';
     position: absolute;
@@ -295,8 +280,9 @@ header{
     transform: translateY(-50%);
     width: 16px;
     height: 24px;
-    background-image: url(../vectors/arrow_downward_24px.svg);
+    background-image: url(../vectors/arrow_notdownward_24px.svg);
     color: #FFFFFF;
+    writing-mode:vertical-lr;
 }
 
     /* /Content-hero */
