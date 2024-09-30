@@ -63,7 +63,7 @@ header{
     padding: 64px 4.2%;
     /* background-color: #d30909; */
     margin: 0;
-    z-index: 1;
+    z-index: 3;
 }
 .BG_Hero {
     position: relative;
@@ -251,6 +251,9 @@ input:checked + .slider:before {
 .btn{
     display: none;
 }
+
+ /* burger-menu */
+
 .burger-menu{
     z-index: 4;
     display: none;
@@ -267,9 +270,89 @@ input:checked + .slider:before {
     font-size: 20px;
     color:white;
 }
+.username{
+    display: none;
+    font-size: 20px;
+    margin: 0;
+    margin-right: 20px;
+}
+#burgerlogout{
+    color:white;
+    justify-content: center;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 90%;
+    padding: 10px 0;
+    display: none;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
+.logout{
+    text-align: center;
+}
+.log{
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#burgerLog{
+    color:white;
+    display: block;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 45%;
+    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
+#burgerSign{
+    color:white;
+    display: block;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 45%;
+    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
+.burger-menu > a{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    width: 90%;
+    background-color:#AAB9CF;
+    padding: 10px 0;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px; 
+}
+.theme{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.check_all_users{
+    display: none;
+}
 #menu_toogle {
     display: none;
 }
+
+ /* /burger-menu */
+
+ /* Login window */
+
+ 
+
+ /* /Login window */
+
 .icons-general-cart {
 }
 .iconactionaccount-circle-24-px {

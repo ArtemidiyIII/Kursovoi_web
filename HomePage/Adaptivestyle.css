@@ -52,6 +52,9 @@
     }
 }
 @media screen and (max-width: 768px){
+    .header-content{
+        justify-content: space-between;
+    }
     .nav_menu{
         display: none;
     }
@@ -60,6 +63,9 @@
     }
     .header-right{
         display: none;
+    }
+    .header-content{
+        padding: 64px 2%;
     }
 
     /* burger-menu */
@@ -117,6 +123,8 @@
         top: 0;
         transform: rotate(90deg);
     }
+
+
 
     /* /burger-menu */
 
