@@ -107,7 +107,7 @@
                                 <input type="text" id="LastName" placeholder="Enter Last Name" name="LastName" required>
                                 <label for="FatherName"><b class="i18n" i18n="FatherName">Father Name</b></label>
                                 <input type="text" id="FatherName" placeholder="Enter Father Name" name="FatherName" >
-                                <button id="generatelogin">Generate login</button>
+                                <button i18n="generate_login" id="generatelogin">Generate login</button>
                                 <label for="Logup"><b class="i18n" i18n="AccountName">Account Name</b></label>
                                 <input id="Logup2" type="text" placeholder="Enter Account name" name="Account" required>
                                 <label for="pws"><b class="i18n" i18n="Password">Password</b></label>
@@ -122,6 +122,8 @@
                                 <button id = "sign"><span class="i18n" i18n="signup" >Sign up</span></button>
                             </div>                                            
                     </div>
+                </div>
+                <div class="Block1">
                 </div>
             </div>
             <div class="Site-cover">
@@ -165,14 +167,14 @@
                 <article class="Content-block">
                     <div class="grid">
                         <div class="Content-text" data-number="01">
-                            <div class="Content-subtitle Accent_text">
+                            <div i18n=get_started class="Content-subtitle Accent_text">
                                 Get Started
                             </div>
-                            <div class="Content-title">
+                            <div i18n=what_level class="Content-title">
                                 What level of  hiker are you?
                             </div>
-                            <p>Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?</p> 
-                            <div class="content-read-more">
+                            <p i18n=determining_what>Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?</p> 
+                            <div i18n = read_more class="content-read-more">
                                 read more
                             </div>
                         </div>
@@ -182,15 +184,15 @@
                 <article class="Content-block">
                     <div class="grid">
                         <div class="Content-text" data-number="02">
-                            <div class="Content-subtitle Accent_text">
+                            <div i18n=hiking_essentials class="Content-subtitle Accent_text">
                                 Hiking Essentials
                             </div>
-                            <div class="Content-title">
+                            <div i18n=picking_the_right class="Content-title">
                                 Picking the right Hiking Gear!
                             </div>
-                            <p>The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
+                            <p i18n=the_nice_thing>The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
                                 Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.</p> 
-                            <div class="content-read-more">
+                            <div i18n = read_more class="content-read-more">
                                 read more
                             </div>
                         </div>
@@ -200,14 +202,14 @@
                 <article class="Content-block">
                     <div class="grid">
                         <div class="Content-text" data-number="03">
-                            <div class="Content-subtitle Accent_text">
+                            <div i18n = where_you_go class="Content-subtitle Accent_text">
                                 where you go is the key
                             </div>
-                            <div class="Content-title">
+                            <div i18n = understand_your_map class="Content-title">
                                 Understand Your Map & Timing
                             </div>
-                            <p>To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..</p> 
-                            <div class="content-read-more">
+                            <p i18n=to_start>To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..</p> 
+                            <div i18n = read_more class="content-read-more">
                                 read more
                             </div>
                         </div>
@@ -222,10 +224,10 @@
                     <a href="#" class="footer-logo">
                         <img src="../vectors/Logo.svg" alt="">
                     </a>
-                    <p class="footer_block-text">
+                    <p i18n=get_out_there class="footer_block-text">
                         Get out there & discover your next slope, mountain & destination!
                     </p>
-                    <span class="footer_block-copyright">
+                    <span i18n=copyright_2019 class="footer_block-copyright">
                         Copyright 2019 MNTN, Inc. Terms & Privacy
                     </span>
                 </div>
@@ -267,5 +269,6 @@
             </div>
         </footer>        
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
