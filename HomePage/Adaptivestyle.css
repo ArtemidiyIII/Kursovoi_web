@@ -53,6 +53,9 @@
     .Register{
         width: 60%;
     }
+    .Nav-slider-container{
+        display: none;
+    }
 }
 @media screen and (max-width: 768px){
     .header-content{
@@ -150,15 +153,58 @@
         flex-basis: auto;
         min-width: auto;
     }
+    .footer_block-info{
+        margin: 0 30px 0 30px;
+    }
     .footer_block{
         text-align: center;
     }
     .footer_block-menu-item{
         margin: 0 15px 50px;
     }
+
+    /* Шрифты 768px */
+
+    .Hero-subtitle{
+        font-size: 13px;
+        padding-left: 62px;
+    }
+    .Hero-subtitle::before {
+        width: 42px;
+    }
+    .Hero-title{
+        font-size: 56px;
+        margin: 15px 0px 30px;
+    }
+    .Content-title{
+        font-size: 48px;
+        margin: 15px 0px 25px;
+    }
+
+    /* /Шрифты 768px */
 }
 @media screen and (max-width: 500px){
     input[type = "text"], input[type = "password"] {
         width: 90%;
     }
+    .footer_block-menu{
+        flex-wrap: wrap;
+    }
+    /* Шрифты 500px */
+
+    .Hero-title{
+        font-size: 40px;
+    }
+    .Content-subtitle{
+        font-size: 13px;
+        padding-left: 62px;
+    }
+    .Content-subtitle::before{
+        width: 42px;
+    }
+    .Content-title{
+        font-size: 40px;
+    }
+
+    /* /Шрифты 500px */
 }

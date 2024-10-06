@@ -3,6 +3,7 @@ let registrmenu = document.querySelector('.Register');
 let username = localStorage.getItem('username');
 let password = localStorage.getItem('password');
 let logining = false;
+const account_menu_toogle = document.getElementById('account_menu_toogle');
 const burger_menu_toogle = document.getElementById('menu_toogle');
 const burger_menu = document.querySelector('burger-menu');
 let burgerlogout = document.getElementById('burgerlogout');
