@@ -9,6 +9,7 @@
     <title class="i18n" i18n="title">MNTN</title>
 </head>
 <body>
+    <div id ="modal_window_background"></div>
     <div id="site-wrapper">
         <header>
             <div class="header-wrapper">
@@ -18,7 +19,7 @@
                 <div class="img_VG" ></div>
                 <div class="BG_Content"></div>
             </div>
-            <div class="header-content">
+            <div class="header-content" id="section-start">
                 <a href="index.html">
                     <div id="Logo">
                         <img src="../vectors/Logo.svg" alt="">
@@ -60,10 +61,10 @@
                         </label>
                         <div class="account-menu">
                             <p class="username"></p>
-                            <button id="burgerlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
+                            <button id="accountlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
                             <div class="log">
-                                <button id="burgerLog"><span i18n="login" class="i18n login">Log in</span> </button>
-                                <button id="burgerSign"><span i18n="signup" class="i18n signup">Sign up</span> </button>
+                                <button id="accountLog"><span i18n="login" class="i18n login">Log in</span> </button>
+                                <button id="accountSign"><span i18n="signup" class="i18n signup">Sign up</span> </button>
                             </div>
                             <div class="theme"></div>                            
                         </div>
@@ -80,16 +81,16 @@
                         <button id="burgerLog"><span i18n="login" class="i18n login">Log in</span> </button>
                         <button id="burgerSign"><span i18n="signup" class="i18n signup">Sign up</span> </button>
                     </div>        
-                    <a href="#" i18n="equipment" class="i18n equipment">Equipment</a>
-                    <a href="#" i18n="about_us" class="i18n about_us">About us</a>
-                    <a href="#" i18n="blog" class="i18n blog">Blog</a>
-                    <a href="#" i18n="checkusers" class="i18n check_all_users">Check all users</a>
+                    <a href="#" i18n="equipment" class="i18n" id = "equipment">Equipment</a>
+                    <a href="#" i18n="about_us" class="i18n" id = "about_us">About us</a>
+                    <a href="#" i18n="blog" class="i18n" id = "blog">Blog</a>
+                    <a href="#" i18n="checkusers" class="i18n" id = "check_all_users">Check all users</a>
                     <div class="theme"></div>
                 </div>                
             </div>
         </header>
         <main>
-            <div class="Login_and_register">
+            <div id="Login_and_register">
                 <div class="Login">
                     <button class="button-close-login buttonclose i18n" i18n="close" >Close</button>
                     <div>
@@ -161,10 +162,19 @@
                         </div>                      
                     </div>
                     <div class="Nav-slider-container">
-                        <div class="Nav-slider">
-                            <ul class="">
-                                <li class="">
-                                    
+                        <div class="Nav-section-counter">
+                            <ul class="section-counter__list">
+                                <li>
+                                    <a href="#section-start" class="section-counter__item counter_text btn-to-scroll">Старт</a>
+                                </li>
+                                <li>
+                                    <a href="#section-1" class="section-counter__item counter_text btn-to-scroll">01</a>
+                                </li>
+                                <li>
+                                    <a href="#section-2" class="section-counter__item counter_text btn-to-scroll">02</a>
+                                </li>
+                                <li>
+                                    <a href="#section-3" class="section-counter__item counter_text btn-to-scroll">03</a>
                                 </li>
                             </ul>
                         </div>
@@ -174,7 +184,7 @@
             <div class="Content-section">
                 <article class="Content-block">
                     <div class="grid">
-                        <div class="Content-text" data-number="01">
+                        <div class="Content-text" data-number="01" id="section-1">
                             <div i18n=get_started class="i18n Content-subtitle Accent_text">
                                 Get Started
                             </div>
@@ -191,7 +201,7 @@
                 </article>
                 <article class="Content-block">
                     <div class="grid">
-                        <div class="Content-text" data-number="02">
+                        <div class="Content-text" data-number="02" id="section-2">
                             <div i18n=hiking_essentials class="i18n Content-subtitle Accent_text">
                                 Hiking Essentials
                             </div>
@@ -209,7 +219,7 @@
                 </article>
                 <article class="Content-block">
                     <div class="grid">
-                        <div class="Content-text" data-number="03">
+                        <div class="Content-text" data-number="03" id="section-3">
                             <div i18n = where_you_go class="i18n Content-subtitle Accent_text">
                                 where you go is the key
                             </div>
@@ -225,112 +235,29 @@
                     </div>
                 </article>
             </div>
-            <div id="Slider">
-                <div id ="Slider-container" class="Slider-container">
-                    <div id="slide">
-                        <article class="Content-block">
-                            <div class="grid">
-                                <div class="Content-text" data-number="01">
-                                    <div i18n=get_started class="i18n Content-subtitle Accent_text">
-                                        Get Started
-                                    </div>
-                                    <div i18n=what_level class="i18n Content-title">
-                                        What level of  hiker are you?
-                                    </div>
-                                    <p i18n=determining_what class="i18n">Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?</p> 
-                                    <div i18n = read_more class="i18n content-read-more">
-                                        read more
-                                    </div>
-                                </div>
-                                <img src="../img/image.png" alt class="Content-img image_01">                       
-                            </div>
-                        </article>
-                    </div>
-                    <div id="slide" >
-                        <article class="Content-block">
-                            <div class="grid">
-                                <div class="Content-text" data-number="02">
-                                    <div i18n=hiking_essentials class="i18n Content-subtitle Accent_text">
-                                        Hiking Essentials
-                                    </div>
-                                    <div i18n=picking_the_right class="i18n Content-title">
-                                        Picking the right Hiking Gear!
-                                    </div>
-                                    <p i18n=the_nice_thing class="i18n">The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
-                                        Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.</p> 
-                                    <div i18n = read_more class="i18n content-read-more">
-                                        read more
-                                    </div>
-                                </div>
-                                <img src="../img/image_2.jpeg" alt class="Content-img image_02">  
-                            </div>
-                        </article>                        
-                    </div>
-                    <div id="slide">
-                        <article class="Content-block">
-                            <div class="grid">
-                                <div class="Content-text" data-number="03">
-                                    <div i18n = where_you_go class="i18n Content-subtitle Accent_text">
-                                        where you go is the key
-                                    </div>
-                                    <div i18n = understand_your_map class="i18n Content-title">
-                                        Understand Your Map & Timing
-                                    </div>
-                                    <p i18n=to_start class="i18n">To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..</p> 
-                                    <div i18n = read_more class="i18n content-read-more">
-                                        read more
-                                    </div>
-                                </div>
-                                <img src="../img/image_1.png" alt class="Content-img image_03">
-                            </div>
-                        </article>
-                    </div>
-                    <div id="slide">
-                        <article class="Content-block">
-                            <div class="grid">
-                                <div class="Content-text" data-number="04">
-                                    <div i18n=get_started class="i18n Content-subtitle Accent_text">
-                                        Get Started
-                                    </div>
-                                    <div i18n=what_level class="i18n Content-title">
-                                        What level of  hiker are you?
-                                    </div>
-                                    <p i18n=determining_what class="i18n">Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?</p> 
-                                    <div i18n = read_more class="i18n content-read-more">
-                                        read more
-                                    </div>
-                                </div>
-                                <img src="../img/image.png" alt class="Content-img image_01">                       
-                            </div>
-                        </article>
-                    </div>
-                    <div id="slide">
-                        <article class="Content-block">
-                            <div class="grid">
-                                <div class="Content-text" data-number="05">
-                                    <div i18n=hiking_essentials class="i18n Content-subtitle Accent_text">
-                                        Hiking Essentials
-                                    </div>
-                                    <div i18n=picking_the_right class="i18n Content-title">
-                                        Picking the right Hiking Gear!
-                                    </div>
-                                    <p i18n=the_nice_thing class="i18n">The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
-                                        Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.</p> 
-                                    <div i18n = read_more class="i18n content-read-more">
-                                        read more
-                                    </div>
-                                </div>
-                                <img src="../img/image_2.jpeg" alt class="Content-img image_02">  
-                            </div>
-                        </article>
+            <div id ="Slider-block">
+                <div id="Slider">
+                    <div id ="Slider-container" class="Slider-container">
+                        <div id="slide">
+                            <img src="../img/image.png" alt class="Slider-img image_1">                       
+                        </div>
+                        <div id="slide" >
+                            <img src="../img/image_2.jpeg" alt class="Slider-img">                 
+                        </div>
+                        <div id="slide">
+                            <img src="../img/image_1.png" alt class="Slider-img">                        
+                        </div>
+                        <div id="slide">
+                            <img src="../img/image_4.jpg" alt class="Slider-img">                        
+                        </div>
+                        <div id="slide">
+                            <img src="../img/image_5.jpg" alt class="Slider-img">                        
+                        </div>
                     </div>
                 </div>
+                <button id="arrow-left" class="left-arrow arrows">&lt;</button> 
+                <button id="arrow-right" class="right-arrow arrows">&gt;</button> 
             </div>
-            <div class="arrows">
-                <button id="arrow-left" class="left-arrow">-</button> 
-                <button id="arrow-right" class="right-arrow">+</button> 
-            </div>
-
             <div class="map box">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11041.084545531883!2d39.817601816531145!3d46.22495253561388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e4cbffce621131%3A0x7f5fc17c1211a2c6!2z0JLQtdGB0LXQu9Cw0Y8g0JbQuNC30L3RjCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksINCg0L7RgdGB0LjRjywgMzUyMDU4!5e0!3m2!1sru!2sby!4v1713176691317!5m2!1sru!2sby" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>

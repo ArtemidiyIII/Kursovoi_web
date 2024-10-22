@@ -299,6 +299,41 @@ input:checked + .slider:before {
     align-items:center;
     opacity: 1;
 }
+#accountlogout{
+    color:white;
+    justify-content: center;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 90%;
+    padding: 10px 0;
+    display: none;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
+#accountLog{
+    color:white;
+    display: block;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 45%;
+    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
+#accountSign{
+    color:white;
+    display: block;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 45%;
+    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
 
  /* /account-menu */
 
@@ -391,7 +426,7 @@ input:checked + .slider:before {
     flex-direction: row;
     margin-bottom: 20px;
 }
-.check_all_users{
+#check_all_users{
     display: none;
 }
 #menu_toogle {
@@ -401,8 +436,14 @@ input:checked + .slider:before {
  /* /burger-menu */
 
 /* Login and Register window */
+#modal_window_background{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
 
-.Login_and_register{
+#Login_and_register{
     display: flex;
     position: absolute;
     align-items: center;
@@ -434,7 +475,7 @@ input[type=text],input[type=password]{
  /* Login window */
 
  .Login{
-    z-index: 4;
+    z-index: 6;
     position: absolute;
     top: 200px;
     margin-left: -3200px;
@@ -489,7 +530,7 @@ input[type=text],input[type=password]{
  /* Register window */
 
  .Register{
-    z-index: 4;
+    z-index: 6;
     position: absolute;
     top: 200px;
     margin-left: -3200px;
@@ -693,17 +734,63 @@ input[type=text],input[type=password]{
     width: 77px;
 }    
 
-.Nav-slider {
+.Nav-section-counter {
     position: fixed;
     height: 240px;
     width: 77px;
-    background-color: aqua;
+    transform: translate(0,0)!important
 }
 
-.nav-slider-links {
+
+
+.section-counter__list {
+    border-right: 3px solid rgba(255,255,255,0.5);
+    /* -webkit-transform:translate(0,-50%); */
+    /* -ms-transform: translate(0,-50%);  */
+    /* transform:translate(0,-50%); */
 }
-.nav-slider-lines {
+
+.section-counter__list li {
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
 }
+
+.section-counter__item {
+    position: relative;
+    display: inline-block;
+    padding: 20px 32px 20px 0px;
+    text-shadow: 1px 1px 20px var(--bg)
+}
+
+.section-counter__item::before {
+    position: absolute;
+    right: -3px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #FFFFFF;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+.section-counter__item._active::before {
+    opacity: 1;
+}
+
+.counter_text{
+    font-family: 'Gilroy_bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2088;
+    color: #FFFFFF;
+
+}
+
 
     /* /Nav-slider */
 
@@ -866,6 +953,11 @@ main {
 }
 
     /* Slider */
+#Slider-block{
+    position: relative;
+    width: 100%;
+
+}
 
 #Slider{
     display: flex;
@@ -883,20 +975,44 @@ main {
 }
 #slide{
     display: flex;
-    background-color: green;
     width: 16%;
 }
 .slide-transition {
     transition: transform 0.3s ease;
 }
-#arrow-left{
-    font-size: 200%;
+.arrows{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
     color: white;
+}
+#arrow-left{
+    left: 5%;
 
 }
 #arrow-right{
-    font-size: 200%;
-    color: white;
+    right: 5%;
+}
+.Slider-img{
+    width: 80%;
+    height: 700px;
+    vertical-align: middle;
+    display: inline-block; 
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+}
+.image_1 {
+    object-position: 70% 85%;
 }
     /* /Slider */
 
@@ -1008,4 +1124,8 @@ footer {
 @font-face {
     font-family: 'Chronicle_semibold';
     src: url('../fonts/Chronicle\ Display\ Semibold.otf');
+}
+.error-message {
+    color: red;
+    font-size: 12px;
 }

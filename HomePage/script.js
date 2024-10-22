@@ -8,9 +8,56 @@ const account_menu_toogle = document.getElementById('account_menu_toogle');
 const burger_menu_toogle = document.getElementById('menu_toogle');
 const burger_menu = document.querySelector('burger-menu');
 let burgerlogout = document.getElementById('burgerlogout');
+let account_menu_logout = document.getElementById('accountlogout');
 let translate = 'en';
 let buttoncloselog = document.querySelector('.button-close-login');
 let buttonclosereg = document.querySelector('.button-close-reg');
+let pUsername = document.querySelectorAll('.username');
+let Modal_window_background = document.getElementById('modal_window_background');
+
+// accountmenuJS
+
+let login_account_menu = document.getElementById('accountLog');
+login_account_menu.addEventListener('click', function(){
+  registrmenu.style= 'margin-left: -3200px !important';
+  loginmenu.style= 'margin-left: 0px !important';
+
+  Modal_window_background.style.zIndex = 5;
+  Modal_window_background.style.backgroundColor = "rgba(0,0,0,0.4)";
+})
+
+let sign_account_menu = document.getElementById('accountSign');
+console.log("accountSign" );
+sign_account_menu.addEventListener('click', function(){
+  console.log("getElementById 'burgerSign");
+  loginmenu.style= 'margin-left: -3200px !important';
+  registrmenu.style= 'margin-left: 0px !important';
+
+  Modal_window_background.style.zIndex = 5;
+  Modal_window_background.style.backgroundColor = "rgba(0,0,0,0.4)";
+})
+
+account_menu_logout.addEventListener('click',function(){
+  username = '';
+  password = '';
+  //убираем значения юзера с локалки
+  localStorage.setItem('username',`${username}`);
+  localStorage.setItem('password',`${password}`);
+  for(let elem of pUsername){
+    elem.style.display = "none";
+  }
+  burgerallusers.style.display = "none";
+  burgerlogout.style.display = "none";
+  localStorage.setItem('logining','false');
+  accountlogout.style.display = "none";
+  login_burger.style.display = "block";
+  sign_burger.style.display = "block";
+  login_account_menu.style.display = "block";
+  sign_account_menu.style.display = "block";
+
+})
+
+// /accountmenuJS
 
 // burgermenuJS
 
@@ -18,18 +65,26 @@ let login_burger = document.getElementById('burgerLog');
 login_burger.addEventListener('click', function(){
   registrmenu.style= 'margin-left: -3200px !important';
   loginmenu.style= 'margin-left: 0px !important';
+
+  Modal_window_background.style.zIndex = 5;
+  Modal_window_background.style.backgroundColor = "rgba(0,0,0,0.4)";
 })
 
 let sign_burger = document.getElementById('burgerSign');
+console.log("sign_burger" );
 sign_burger.addEventListener('click', function(){
+  console.log("getElementById 'burgerSign");
   loginmenu.style= 'margin-left: -3200px !important';
   registrmenu.style= 'margin-left: 0px !important';
+
+  Modal_window_background.style.zIndex = 5;
+  Modal_window_background.style.backgroundColor = "rgba(0,0,0,0.4)";
 })
 
-let burgerequipment = document.querySelector('.equipment');
-let burgerabout = document.querySelector('.about_us');
-let burgerblog = document.querySelector('.blog');
-let burgerallusers = document.querySelector('.check_all_users');
+let burgerequipment = document.getElementById('equipment');
+let burgerabout = document.getElementById('about_us');
+let burgerblog = document.getElementById('blog');
+let burgerallusers = document.getElementById('check_all_users');
 burgerequipment.addEventListener('click',function(event){
     event.preventDefault()
     if(localStorage.getItem('username') === '')
@@ -80,27 +135,61 @@ burgerlogout.addEventListener('click',function(){
     //убираем значения юзера с локалки
     localStorage.setItem('username',`${username}`);
     localStorage.setItem('password',`${password}`);
-    singup.style.display = 'flex';
-    login.style.display = "flex";
     for(let elem of pUsername){
       elem.style.display = "none";
     }
-    checkusers.style.display = "none";
+    burgerallusers.style.display = "none";
     burgerlogout.style.display = "none";
     localStorage.setItem('logining','false');
+    accountlogout.style.display = "none";
+    login_burger.style.display = "block";
+    sign_burger.style.display = "block";
+    login_account_menu.style.display = "block";
+    sign_account_menu.style.display = "block";
 })
+
+// burger_menu_toogle.addEventListener('click', function(){
+//   if(burger_menu_toogle.checked){
+//     burger_menu.display = "flex";
+//   }
+//   else{
+//     burger_menu.display = "none";
+//   }
+// })
 
 // /burgermenuJS
 
 // Login menu
-
 buttoncloselog.addEventListener('click',function(){
-    loginmenu.style= 'margin-left: -3200px !important';
+  loginmenu.style= 'margin-left: -3200px !important';
+
+  Modal_window_background.style.zIndex = "auto";
+  Modal_window_background.style.backgroundColor = "transparent";
   }
 )
 
+let checkuser = localStorage.getItem('logining') === 'true';
+if(checkuser && username !='Admin'){
+  setLoginNameOnSite();
+  let unauthotized = document.querySelectorAll(".unauthotized");
+    for(let elements of unauthotized){
+      elements.style = "display:flex"
+    }
+}
+else{
+  if(username == "Admin"){
+    setLoginNameOnSite();
+    let admindives = document.querySelectorAll('.admin');
+    for(let elem of admindives){
+    elem.style.display = "none";
+    }
+    nav_third_block.style.visibility = "visible";
+    burgerallusers.style.display = "flex";
+  }
+}
+
 //Отправка авторизации
-let pUsername = document.querySelectorAll('.username');
+
 let nav_third_block = document.getElementById('nav_third-block');
 const Login = document.getElementById('log');
 Login.addEventListener('click', function(){
@@ -109,7 +198,7 @@ Login.addEventListener('click', function(){
   username = logup;
   password = userpassword;
   
- let url = '../JsonFiles/LoginAndPasswords.json'; 
+ let url = '../jsonfiles/LoginAndPasswods.json'; 
  fetch(url)
  .then(response => response.json())
  .then(result => { for(let element of result){
@@ -124,8 +213,9 @@ Login.addEventListener('click', function(){
       let admindives = document.querySelectorAll('.admin');
       for(let elem of admindives){
       elem.style.display = "none";
+      }
       nav_third_block.style.visibility = "visible";
-    }
+      burgerallusers.style.display = "flex";
     }
     else{
       let unauthotized = document.querySelectorAll(".unauthotized");
@@ -150,14 +240,16 @@ function setLoginNameOnSite(){
   elem.style.display = "block";
  
  }
- logut.style = "display: flex";
  loginmenu.style = 'transform: translateX(-2150px)';
- singup.style.display = 'none';
- login.style.display = "none";
  login_burger.style.display = 'none';
  sign_burger.style.display = 'none';
-
+ login_account_menu.style.display = 'none';
+ sign_account_menu.style.display = 'none';
  burgerlogout.style.display ="flex";
+ account_menu_logout.style.display ="flex";
+
+ Modal_window_background.style.zIndex = "auto";
+ Modal_window_background.style.backgroundColor = "transparent";
 }
 
 // /Login menu
@@ -166,15 +258,72 @@ function setLoginNameOnSite(){
 
 buttonclosereg.addEventListener('click',function(){
     registrmenu.style = 'margin-left: -3200px !important';
+
+    Modal_window_background.style.zIndex = "auto";
+    Modal_window_background.style.backgroundColor = "transparent";
   }
 )
 
+function generateUsername() {
+  const adjectives = ['Adventurous', 'Brave', 'Curious', 'Daring', 'Energetic', 'Friendly', 'Helpful', 'Imaginative', 'Kind', 'Optimistic',"Abacus","Candle","Eavesdrop","Gurgle","Icicle","Kaleidoscope","Marigold","Opaline","Quibble","Tangle","Vanguard","Xenial","Zephyr","Ambrosia","Daffodil","Frangipani","Gingko","Illusion"];
+  const nouns = ['Sunflower', 'Raindrop', 'Firefly', 'Pebble', 'Bumblebee', 'Starfish', 'Snowflake', 'Wildflower', 'Seashell', 'Dragonfly',"Bangle","Dangle","Fascinate","Hazelnut","Jargon","Limelight","Nimble","Panacea","Ramble","Serenade","Unravel","Whimsical","Yearn","Brocade","Camellia","Effervescent","Hinterland","Juniper"];
+
+  const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+  return `${randomAdjective}${randomNoun}`;
+}
+let count = 0
+
+const randombutton = document.getElementById('generatelogin');
+randombutton.addEventListener('click',function(){
+  
+  let account = document.getElementById('Logup2');
+  if(count < 5){
+   const username = generateUsername();
+  
+    account.value = username; 
+    count++;
+  }
+  else{
+    if(!checkerror){
+    let errorMessge = document.createElement('p');
+    errorMessge.innerText = "You cant generate more than 5 count";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    account.insertAdjacentElement('afterend', errorMessge);
+    checkerror = true;
+    }
+  }
+  
+})
+
 // /Register menu JS
+
+// Error message
+
+let checkerror = false
+function addredblocks(){
+  if(!checkerror){
+    let errorMessge = document.createElement('p');
+    errorMessge.innerText = "Incorrect login";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    let errorpassword = document.createElement('p');
+    errorpassword.innerText = "Incorrect password";
+    errorpassword.style = "color: red; font-size: 12px";
+    let logup = document.getElementById("Logup");
+    let userpassword = document.getElementById("PasswordLog");
+    logup.insertAdjacentElement('afterend', errorMessge);
+    userpassword.insertAdjacentElement('afterend', errorpassword);
+    checkerror = true;
+  }
+}
+
+// /Error message
 
 // Language select
 
 function loadLanguage(language) {
-    let url = '../JsonFiles/i18n.json';
+    let url = '../jsonfiles/i18n.json';
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -309,13 +458,14 @@ let checkerrorprivacy = false;
 const sign = document.getElementById("sign");
 let height = 1000;
 sign.addEventListener("click", function() {
-  let url = '../JsonFiles/LoginAndPasswods.json';
+  let url = '../jsonfiles/LoginAndPasswods.json';
   const password = document.getElementById('password').value;
   const validationMessage = validatePassword(password);
   validateEmail();
   let checkboxprivacy = document.querySelector('.checkboxprivacy');
   let ussersArray = [];
-
+  
+  console.log("sdjfhsdfgdsfuyg")
   if (document.getElementById('password').value == document.getElementById('Cpassword').value) {
     fetch(url)
       .then(response => response.json())

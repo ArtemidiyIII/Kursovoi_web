@@ -8,6 +8,7 @@
     "account": "Account",
     "close": "Close",
     "login": "Log in",
+    "logout": "Log out",
     "AccountName": "Account Name",
     "Password": "Password",
     "signup": "Sing up",
@@ -43,9 +44,6 @@
     "the_team": "The Team",
     "jobs": "Jobs",
     "press": "Press",
-    "": "",
-    "": "",
-    "": "",
     "": ""
   },
 
@@ -58,6 +56,7 @@
     "account": "Аккаунт",
     "close": "Закрыть",
     "login": "Войти",
+    "logout": "Выйти",
     "AccountName": "Имя аккаунта",
     "Password": "Пароль",
     "signup": "Регистрация",
