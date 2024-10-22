@@ -1056,12 +1056,20 @@ footer {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 100%;
-    margin: 30px 0 45px;
+    margin: 30px 0 1px;
     font-family: 'Gilroy_bold';
     font-weight: 700;
     font-size: 18px;
     line-height: 1.78;
     color: #FFFFFF;
+}
+#author_links{
+    font-family: 'Gilroy_medium';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.78;
+    color: #FFFFFF;
+    opacity: 0.5;
 }
 #footer_block-copyright {
     font-family: 'Gilroy_medium';

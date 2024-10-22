@@ -153,6 +153,9 @@
         flex-basis: auto;
         min-width: auto;
     }
+    #footer_block-text{
+        margin: 30px 0 30px;
+    }
     .footer_block-info{
         margin: 0 30px 0 30px;
     }
