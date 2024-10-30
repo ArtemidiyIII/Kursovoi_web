@@ -1,0 +1,43 @@
+main {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    width: 100%;
+    /* top: 0%; */
+    position: relative;
+    min-height: 90vw;
+}
+
+
+#burgerlogout{
+    color:white;
+    justify-content: center;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
+#accountlogout {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #AAB9CF;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 1921px){
+    main{
+        min-height: 1800px;
+    }    
+}

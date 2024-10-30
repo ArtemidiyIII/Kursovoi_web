@@ -14,6 +14,7 @@ let buttoncloselog = document.querySelector('.button-close-login');
 let buttonclosereg = document.querySelector('.button-close-reg');
 let pUsername = document.querySelectorAll('.username');
 let Modal_window_background = document.getElementById('modal_window_background');
+let burgerallusers = document.getElementById('check_all_users');
 
 // accountmenuJS
 
@@ -84,7 +85,6 @@ sign_burger.addEventListener('click', function(){
 let burgerequipment = document.getElementById('equipment');
 let burgerabout = document.getElementById('about_us');
 let burgerblog = document.getElementById('blog');
-let burgerallusers = document.getElementById('check_all_users');
 burgerequipment.addEventListener('click',function(event){
     event.preventDefault()
     if(localStorage.getItem('username') === '')
@@ -183,7 +183,9 @@ else{
     for(let elem of admindives){
     elem.style.display = "none";
     }
-    nav_third_block.style.visibility = "visible";
+    for(let elem of foradmin){
+      elem.style.visibility = "visible";
+    }
     burgerallusers.style.display = "flex";
   }
 }
@@ -211,11 +213,14 @@ Login.addEventListener('click', function(){
     checkerror = false;
     if(username == 'Admin'){
       let admindives = document.querySelectorAll('.admin');
+      let foradmin = document.querySelectorAll('.for_admin');
+      for(let elem of foradmin){
+        elem.style.visibility = "visible";
+        }
+      burgerallusers.style.display = "flex";
       for(let elem of admindives){
       elem.style.display = "none";
       }
-      nav_third_block.style.visibility = "visible";
-      burgerallusers.style.display = "flex";
     }
     else{
       let unauthotized = document.querySelectorAll(".unauthotized");
@@ -374,8 +379,6 @@ let footer_block_copyright = document.getElementById('footer_block-copyright');
 //let header = document.querySelector('header');
 // Проверяем, есть ли сохраненное значение в локальном хранилище
 const isDarkThemeEnabled = localStorage.getItem('darkThemeEnabled') === 'true';
-let searchphoto = document.querySelector('.search-photo');
-let basket = document.querySelector('shoping');
 // Устанавливаем начальное значение в соответствии с сохраненным значением
 if (isDarkThemeEnabled) {
   switchDailytheme();

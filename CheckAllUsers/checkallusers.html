@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="set-cookie">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Adaptivestyle.css">
+
+    <link rel="stylesheet" href="../HomePage/style.css">
+    <link rel="stylesheet" href="../HomePage/Adaptivestyle.css">
+    <link rel="stylesheet" href="checkallusersstyle.css">
+
     <title class="i18n" i18n="title">MNTN</title>
 </head>
 <body>
@@ -20,7 +22,7 @@
                 <div class="BG_Content"></div>
             </div>
             <div class="header-content" id="section-start">
-                <a href="index.html">
+                <a href="../HomePage/index.html">
                     <div id="Logo">
                         <img src="../vectors/Logo.svg" alt="">
                     </div>
@@ -40,14 +42,14 @@
                 <nav class="nav_menu">                    
                     <a i18n="equipment" href="#" class="i18n nav_menu-text">Equipment
                     </a>
-                    <a href="#" i18n="about_us" class="i18n nav_menu-text">About us
+                    <a href="../About_us/about_us.html" i18n="about_us" class="i18n nav_menu-text">About us
                     </a>
                     <a href="#" i18n="blog" class="i18n nav_menu-text" >Blog
                     </a>           
                 </nav>
                 <nav id="nav_third-block">
                     <div class="for_admin">
-                        <a href="../Check All Users/checkallusers.html" i18n="checkusers" class="i18n nav_menu-text">
+                        <a href="../CheckAllUsers/checkallusers.html" i18n="checkusers" class="i18n nav_menu-text">
                             Check all users
                         </a>
                     </div>
@@ -62,10 +64,7 @@
                         <div class="account-menu">
                             <p class="username"></p>
                             <button id="accountlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
-                            <div class="log">
-                                <button id="accountLog"><span i18n="login" class="i18n login">Log in</span> </button>
-                                <button id="accountSign"><span i18n="signup" class="i18n signup">Sign up</span> </button>
-                            </div>
+                            
                             <div class="theme"></div>                            
                         </div>
                     </div>
@@ -77,195 +76,25 @@
                 <div class="burger-menu">
                     <p class="username"></p>
                     <button id="burgerlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
-                    <div class="log">
-                        <button id="burgerLog"><span i18n="login" class="i18n login">Log in</span> </button>
-                        <button id="burgerSign"><span i18n="signup" class="i18n signup">Sign up</span> </button>
-                    </div>        
+                            
                     <a href="#" i18n="equipment" class="i18n" id = "equipment">Equipment</a>
-                    <a href="#" i18n="about_us" class="i18n" id = "about_us">About us</a>
+                    <a href="../About_us/about_us.html" i18n="about_us" class="i18n" id = "about_us">About us</a>
                     <a href="#" i18n="blog" class="i18n" id = "blog">Blog</a>
-                    <a href="#" i18n="checkusers" class="i18n" id = "check_all_users">Check all users</a>
+                    <a href="../CheckAllUsers/checkallusers.html" i18n="checkusers" class="i18n" id = "check_all_users">Check all users</a>
                     <div class="theme"></div>
                 </div>                
             </div>
         </header>
         <main>
-            <div id="Login_and_register">
-                <div class="Login">
-                    <button class="button-close-login buttonclose i18n" i18n="close" >Close</button>
-                    <div>
-                        <b i18n="login" class="i18n login">Log in</b>              
-                            <div class="login-form">
-                                <label for="Logup"><b i18n="AccountName" class="i18n">Account Name</b></label>
-                                <input id="Logup" type="text" placeholder="Enter Account name" name="Account" required>
-                                <label for="pws"><b i18n="Password" class="i18n">Password</b></label>
-                                <input id="PasswordLog" type="password" placeholder="Enter Password" required>
-                                <button id = "log"><span i18n="login" class="i18n">Log in</span></button>
-                            </div>         
-                    </div>
-                </div>
-                <div class="Register">
-                    <button class="button-close-reg buttonclose i18n" i18n="close">Close</button>
-                    <div>
-                        <b class="i18n" i18n="signup">Sing up</b>
-                            
-                            <div class="reg-form">
-                                <label for="Email"><b class="i18n" i18n="Email">Email</b></label>
-                                <input id="Email" type="text" placeholder="Enter email" name="Email" required>
-                                <label for="FisrtName"><b class="i18n" i18n="FirstName">First Name</b></label>
-                                <input type="text" id="FirstName" placeholder="Enter First Name" name="FistName" required>
-                                <label for="LastName"><b class="i18n" i18n="LastName">Last Name</b></label>
-                                <input type="text" id="LastName" placeholder="Enter Last Name" name="LastName" required>
-                                <label for="FatherName"><b class="i18n" i18n="FatherName">Father Name</b></label>
-                                <input type="text" id="FatherName" placeholder="Enter Father Name" name="FatherName" >
-                                <button i18n="generate_login" id="generatelogin">Generate login</button>
-                                <label for="Logup"><b class="i18n" i18n="AccountName">Account Name</b></label>
-                                <input id="Logup2" type="text" placeholder="Enter Account name" name="Account" required>
-                                <label for="pws"><b class="i18n" i18n="Password">Password</b></label>
-                                <input type="password" id="password" placeholder="Enter Password" name="passwod" required>
-                                <label for="pws"><b class="i18n" i18n="CPassword">Confirm Password</b></label>
-                                <input type="password" id="Cpassword" placeholder="Confirm Password" name="Comfpasswod" required>
-                                <div class="Policy">
-                                    <input type="checkbox" class="checkboxprivacy">
-                                    <a href="#" class="Privacy">Privacy Policy and Terms & Conditions</a>
-                                </div>
-                               
-                                <button id = "sign"><span class="i18n" i18n="signup" >Sign up</span></button>
-                            </div>                                            
-                    </div>
-                </div>
-            </div>
-            <div class="Site-cover">
-                <div class="Second-nav">
-                    <div class="Social">
-                        <span i18n=follow_us class="i18n Follow_us">
-                            Follow us
-                        </span>
-                        <div class="Links">
-                            <a href="#" class="Link">
-                                <img src="../vectors/instagram.svg" alt="">
-                            </a>
-                            <a href="#" class="Link">
-                                <img src="../vectors/twitter.svg" alt="">
-                            </a>                    
-                        </div>           
-                    </div>
-                    <div class="Hero-content">
-                        <div i18n=a_hiking_guide class="i18n Hero-subtitle Accent_text">
-                            A Hiking guide
-                        </div>
-                        <div i18n=be_prepared class="i18n Hero-title">
-                            Be prepared for the Mountains and beyond!
-                        </div>
-                        <div i18n=scroll_down class="i18n Hero-scroll-down">
-                            scroll down
-                        </div>                      
-                    </div>
-                    <div class="Nav-slider-container">
-                        <div class="Nav-section-counter">
-                            <ul class="section-counter__list">
-                                <li>
-                                    <a href="#section-start" class="section-counter__item counter_text btn-to-scroll">Старт</a>
-                                </li>
-                                <li>
-                                    <a href="#section-1" class="section-counter__item counter_text btn-to-scroll">01</a>
-                                </li>
-                                <li>
-                                    <a href="#section-2" class="section-counter__item counter_text btn-to-scroll">02</a>
-                                </li>
-                                <li>
-                                    <a href="#section-3" class="section-counter__item counter_text btn-to-scroll">03</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="Content-section">
-                <article class="Content-block">
-                    <div class="grid">
-                        <div class="Content-text" data-number="01" id="section-1">
-                            <div i18n=get_started class="i18n Content-subtitle Accent_text">
-                                Get Started
-                            </div>
-                            <div i18n=what_level class="i18n Content-title">
-                                What level of  hiker are you?
-                            </div>
-                            <p i18n=determining_what class="i18n">Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?</p> 
-                            <div i18n = read_more class="i18n content-read-more">
-                                read more
-                            </div>
-                        </div>
-                        <img src="../img/image.png" alt class="Content-img image_01">                       
-                    </div>
-                </article>
-                <article class="Content-block">
-                    <div class="grid">
-                        <div class="Content-text" data-number="02" id="section-2">
-                            <div i18n=hiking_essentials class="i18n Content-subtitle Accent_text">
-                                Hiking Essentials
-                            </div>
-                            <div i18n=picking_the_right class="i18n Content-title">
-                                Picking the right Hiking Gear!
-                            </div>
-                            <p i18n=the_nice_thing class="i18n">The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
-                                Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.</p> 
-                            <div i18n = read_more class="i18n content-read-more">
-                                read more
-                            </div>
-                        </div>
-                        <img src="../img/image_2.jpeg" alt class="Content-img image_02">  
-                    </div>
-                </article>
-                <article class="Content-block">
-                    <div class="grid">
-                        <div class="Content-text" data-number="03" id="section-3">
-                            <div i18n = where_you_go class="i18n Content-subtitle Accent_text">
-                                where you go is the key
-                            </div>
-                            <div i18n = understand_your_map class="i18n Content-title">
-                                Understand Your Map & Timing
-                            </div>
-                            <p i18n=to_start class="i18n">To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..</p> 
-                            <div i18n = read_more class="i18n content-read-more">
-                                read more
-                            </div>
-                        </div>
-                        <img src="../img/image_1.png" alt class="Content-img image_03">
-                    </div>
-                </article>
-            </div>
-            <div id ="Slider-block">
-                <div id="Slider">
-                    <div id ="Slider-container" class="Slider-container">
-                        <div id="slide">
-                            <img src="../img/image.png" alt class="Slider-img image_1">                       
-                        </div>
-                        <div id="slide" >
-                            <img src="../img/image_2.jpeg" alt class="Slider-img">                 
-                        </div>
-                        <div id="slide">
-                            <img src="../img/image_1.png" alt class="Slider-img">                        
-                        </div>
-                        <div id="slide">
-                            <img src="../img/image_4.jpg" alt class="Slider-img">                        
-                        </div>
-                        <div id="slide">
-                            <img src="../img/image_5.jpg" alt class="Slider-img">                        
-                        </div>
-                    </div>
-                </div>
-                <button id="arrow-left" class="left-arrow arrows">&lt;</button> 
-                <button id="arrow-right" class="right-arrow arrows">&gt;</button> 
-            </div>
-            <div class="map box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11041.084545531883!2d39.817601816531145!3d46.22495253561388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e4cbffce621131%3A0x7f5fc17c1211a2c6!2z0JLQtdGB0LXQu9Cw0Y8g0JbQuNC30L3RjCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksINCg0L7RgdGB0LjRjywgMzUyMDU4!5e0!3m2!1sru!2sby!4v1713176691317!5m2!1sru!2sby" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p i18n="ourusers" class="i18n">our users</p>
+            <div class="users">
+
             </div>
         </main>
         <footer>
             <div class="footer-content">
                 <div class="footer_block footer_block-info">
-                    <a href="#" id="footer_logo">
+                    <a href="../HomePage/index.html" id="footer_logo">
                         <img src="../vectors/Logo.svg" alt="">
                     </a>
                     <p i18n=get_out_there id="footer_block-text">
@@ -322,6 +151,6 @@
             </div>
         </footer>        
     </div>
-    <script src="script.js"></script>
+    <script src="../CheckAllUsers/scriptforcheck.js"></script>
 </body>
 </html>
