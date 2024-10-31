@@ -242,7 +242,7 @@ input:checked + .slider:before {
     width: 100%;
 }
 .for_admin{
-    align-items: center;    
+    align-items: center;
     visibility: hidden;
 }
 .header-right{

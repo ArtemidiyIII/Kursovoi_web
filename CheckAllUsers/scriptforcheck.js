@@ -14,10 +14,7 @@ const burger_menu = document.querySelector('burger-menu');
 let burgerlogout = document.getElementById('burgerlogout');
 let account_menu_logout = document.getElementById('accountlogout');
 let translate = 'en';
-let buttoncloselog = document.querySelector('.button-close-login');
-let buttonclosereg = document.querySelector('.button-close-reg');
 let pUsername = document.querySelectorAll('.username');
-let Modal_window_background = document.getElementById('modal_window_background');
 
 /* main */
 
