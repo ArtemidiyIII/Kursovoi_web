@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../HomePage/style.css">
+    <link rel="stylesheet" href="../HomePage/Adaptivestyle.css">
+    <link rel="stylesheet" href="checkallusersstyle.css">
+
+    <title class="i18n" i18n="title">MNTN</title>
+</head>
+<body>
+    <div id ="modal_window_background"></div>
+    <div id="site-wrapper">
+        <header>
+            <div class="header-wrapper">
+                <div class="img_HG" ></div>      
+                <div class="BG_Hero"></div>
+                <div class="img_MG" ></div>
+                <div class="img_VG" ></div>
+                <div class="BG_Content"></div>
+            </div>
+            <div class="header-content" id="section-start">
+                <a href="../HomePage/index.html">
+                    <div id="Logo">
+                        <img src="../vectors/Logo.svg" alt="">
+                    </div>
+                </a>
+                <nav class="nav_second-block">
+                    <div class="toogle-switch">
+                        <label class="switch">
+                            <input type="checkbox" id="check">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <select name="" id="languageSelect">
+                        <option value="en" id="translateEN" select>en</option>
+                        <option value="ru" id="translateRU">ru</option>
+                    </select>
+                </nav>
+                <nav class="nav_menu">                    
+                    <a i18n="equipment" href="#" class="i18n nav_menu-text">Equipment
+                    </a>
+                    <a href="../About_us/about_us.html" i18n="about_us" class="i18n nav_menu-text">About us
+                    </a>
+                    <a href="#" i18n="blog" class="i18n nav_menu-text" >Blog
+                    </a>           
+                </nav>
+                <nav id="nav_third-block">
+                    <div class="for_admin">
+                        <a href="../CheckAllUsers/checkallusers.html" i18n="checkusers" class="i18n nav_menu-text">
+                            Check all users
+                        </a>
+                    </div>
+                </nav>
+                <div class="header-right"> 
+                    <div class="Account-menu">
+                        <input type="checkbox" id="account_menu_toogle"> 
+                        <label id="Account" for="account_menu_toogle">
+                            <img src="../vectors/account_circle_24px.svg" alt="">
+                            <span i18n="account" class="i18n account">Account</span> 
+                        </label>
+                        <div class="account-menu">
+                            <p class="username"></p>
+                            <button id="accountlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
+                            
+                            <div class="theme"></div>                            
+                        </div>
+                    </div>
+                </div>
+                <input type="checkbox" id="menu_toogle">
+                <label class="btn" for="menu_toogle">
+                    <span></span>
+                </label>
+                <div class="burger-menu">
+                    <p class="username"></p>
+                    <button id="burgerlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
+                            
+                    <a href="#" i18n="equipment" class="i18n" id = "equipment">Equipment</a>
+                    <a href="../About_us/about_us.html" i18n="about_us" class="i18n" id = "about_us">About us</a>
+                    <a href="#" i18n="blog" class="i18n" id = "blog">Blog</a>
+                    <a href="../CheckAllUsers/checkallusers.html" i18n="checkusers" class="i18n" id = "check_all_users">Check all users</a>
+                    <div class="theme"></div>
+                </div>                
+            </div>
+        </header>
+        <main>
+            <p i18n="ourusers" class="i18n Accent_text">our users</p>
+            <div class="users">
+
+            </div>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer_block footer_block-info">
+                    <a href="../HomePage/index.html" id="footer_logo">
+                        <img src="../vectors/Logo.svg" alt="">
+                    </a>
+                    <p i18n=get_out_there id="footer_block-text">
+                        Get out there & discover your next slope, mountain & destination!
+                    </p>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTSDvWHtQJpFTcDckRrpqBXBNzldjprDRZwdrqbjWKNGSmgXZLXLhczCclvdzZHrmMcjWW" id="author_links">
+                        ashukynec@gmail.com
+                    </a>
+                    <a href="tel:+375293145779" id="author_links">
+                        +375293145779
+                    </a>
+                    <a href="https://github.com/ArtemidiyIII/Kursovoi_web" id="author_links">
+                        GitHub
+                    </a>
+                    <span i18n=copyright_2019 id="footer_block-copyright">
+                        Copyright 2019 MNTN, Inc. Terms & Privacy
+                    </span>
+                </div>
+                <div class="footer_block footer_block-menu">
+                    <div class="footer_block-menu-item">
+                        <div i18n=more_on_the_blog class="i18n footer_block-menu-title Accent_text">
+                            More on The Blog
+                        </div>
+                        <a i18n="about_mntn" href="#" class="i18n footer_links">
+                            About MNTN
+                        </a>
+                        <a i18n="contributors_writers" href="#" class="i18n footer_links">
+                            Contributors & Writers
+                        </a>
+                        <a i18n="write_for_us" href="#" class="i18n footer_links">
+                            Write For Us
+                        </a>
+                        <a i18n="contact_us" href="#" class="i18n footer_links">
+                            Contact Us
+                        </a>
+                        <a i18n="privacy_policy" href="#" class="i18n footer_links">
+                            Privacy Policy
+                        </a>
+                    </div>
+                    <div class="footer_block-menu-item">
+                        <div i18n=more_on_mntn class="i18n footer_block-menu-title Accent_text">
+                            More on MNTN
+                        </div>
+                        <a i18n="the_team" href="https://www.youtube.com/" class="i18n footer_links">
+                            The Team</a>
+                        <a i18n="jobs" href="#" class="i18n footer_links">
+                            Jobs
+                        </a>
+                        <a i18n="press" href="#" class="i18n footer_links">
+                            Press
+                        </a>
+                    </div>    
+                </div>  
+            </div>
+        </footer>        
+    </div>
+    <script src="../CheckAllUsers/scriptforcheck.js"></script>
+</body>
+</html>

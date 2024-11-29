@@ -1,0 +1,20 @@
+[
+  {
+    "email": "ashikunec@gmail.com",
+    "FirstName": "Artem",
+    "LastName": "Shikunets",
+    "FatherName": "Sergeevich",
+    "login": "Artem",
+    "password": "12345"
+
+
+  },
+  {
+    "email": "ashukynec@gmail.com",
+    "FirstName": "Artem",
+    "LastName": "Shikunets",
+    "FatherName": "Sergeevich",
+    "login": "Admin",
+    "password": "12345tema"
+  }
+]
